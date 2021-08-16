@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:my_flutter_app/ui/edit_page.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -9,6 +10,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -50,7 +52,11 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Edit"),
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (_) {
+                        return EditPage();
+                      }));
+                    },
                   ),
                   SizedBox(
                     height: 24.0,
@@ -66,7 +72,9 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(
                           width: 12.0,
                         ),
-                        Text("TopUp"),
+                        Text(
+                          "TopUp",
+                        ),
                       ],
                     ),
                     onPressed: () {},
@@ -94,24 +102,28 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Card(
+              borderOnForeground: true,
               margin: EdgeInsets.all(16.0),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "+998 93 188 1333",
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          "Mobile Phone",
-                          textAlign: TextAlign.start,
-                        ),
-                      ],
+                    Container(
+                      width: size.width * 0.5,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            "+998 93 188 1333",
+                            textAlign: TextAlign.start,
+                          ),
+                          Text(
+                            "Mobile Phone",
+                            textAlign: TextAlign.start,
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 24.0,
@@ -143,20 +155,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   children: <Widget>[
-                    Column(
-                      children: [
-                        Text("+998 93 188 1333"),
-                        Text("Home"),
-                      ],
+                    Container(
+                      width: size.width * 0.7,
+                      child: Column(
+                        children: [
+                          Text("+998 93 188 1333"),
+                          Text("Home"),
+                        ],
+                      ),
                     ),
-
-                    SizedBox(
-                      width: 128.0,
-                    ),
-
                     SizedBox(
                       height: 24.0,
-                      width: 32.0,
+                      width: size.width * 0.05,
                       child: VerticalDivider(
                         color: Colors.green,
                       ),
