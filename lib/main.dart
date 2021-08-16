@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/ui/animation_page.dart';
+import 'package:my_flutter_app/ui/chess_page.dart';
 import 'package:my_flutter_app/ui/list_page.dart';
 import 'package:my_flutter_app/ui/profile_page.dart';
 

@@ -17,7 +17,7 @@ class _ListPageState extends State<ListPage> {
           child: ListView(
         children: users
             .map((item) => Card(
-                  child: FlatButton(
+                  child: OutlinedButton(
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar( SnackBar(
                         content: Text(
@@ -38,6 +38,7 @@ class _ListPageState extends State<ListPage> {
                 ))
             .toList(),
       )),
+
     );
   }
 }
