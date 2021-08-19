@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'image_url.dart' as img;
 
 class SecondPage extends StatefulWidget {
   @override
@@ -7,9 +9,6 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPageState extends State<SecondPage> {
-  String imgUrl =
-      "https://cdn.pixabay.com/photo/2017/04/05/01/12/traveler-2203666_960_720.jpg";
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -31,28 +30,18 @@ class _SecondPageState extends State<SecondPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  setCircleAvatar(
-                      "https://cdn.pixabay.com/photo/2014/03/29/09/17/cat-300572__340.jpg",
-                      "Mallavoy"),
-                  setCircleAvatar(
-                      "https://cdn.pixabay.com/photo/2015/05/22/05/52/cat-778315__340.jpg",
-                      "Qoravoy"),
-                  setCircleAvatar(
-                      "https://cdn.pixabay.com/photo/2021/07/13/11/34/cat-6463284__340.jpg",
-                      "Baroqvoy"),
-                  setCircleAvatar(
-                      "https://cdn.pixabay.com/photo/2020/10/05/10/51/cat-5628953__340.jpg",
-                      "Momiqvoy"),
-                  setCircleAvatar(
-                      "https://cdn.pixabay.com/photo/2016/03/28/10/05/kitten-1285341__340.jpg",
-                      "Oppoqvoy"),
+                  setCircleAvatar(img.bag1, "Gucci"),
+                  setCircleAvatar(img.bag2, "Nike"),
+                  setCircleAvatar(img.bag3, "Adidas"),
+                  setCircleAvatar(img.bag4, "Chloe"),
+                  setCircleAvatar(img.bag5, "Prada"),
                 ],
               ),
               Container(
                 width: size.width * 1.0,
                 height: size.width * 1.0,
                 child: Image.network(
-                  "https://cdn.pixabay.com/photo/2017/04/05/01/12/traveler-2203666_960_720.jpg",
+                  img.bagSecond,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -87,7 +76,7 @@ class _SecondPageState extends State<SecondPage> {
                       color: Colors.black54,
                       height: 24.0,
                       child: Image.network(
-                        imgUrl,
+                        img.bag4,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -98,7 +87,7 @@ class _SecondPageState extends State<SecondPage> {
                       color: Colors.red,
                       height: 24.0,
                       child: Image.network(
-                        imgUrl,
+                        img.bag1,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -108,11 +97,11 @@ class _SecondPageState extends State<SecondPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  setBottomIcon(Icon(Icons.home_outlined)),
-                  setBottomIcon(Icon(Icons.search)),
-                  setBottomIcon(Icon(Icons.shopping_bag_outlined)),
-                  setBottomIcon(Icon(Icons.favorite_border)),
-                  setBottomIcon(Icon(Icons.person_outline_outlined)),
+                  setBottomIcon(Icon(CupertinoIcons.home)),
+                  setBottomIcon(Icon(CupertinoIcons.search)),
+                  setBottomIcon(Icon(CupertinoIcons.bag)),
+                  setBottomIcon(Icon(CupertinoIcons.heart)),
+                  setBottomIcon(Icon(CupertinoIcons.person)),
                 ],
               ),
             ],
@@ -137,7 +126,6 @@ class _SecondPageState extends State<SecondPage> {
           CircleAvatar(
             backgroundImage: NetworkImage(imageUrl),
             radius: 28.0,
-
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),

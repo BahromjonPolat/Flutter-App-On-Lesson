@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:my_flutter_app/lesson5/shop/second_ui.dart';
-
+import 'image_url.dart' as img;
 
 class MainShoppingPage extends StatefulWidget {
   @override
@@ -16,12 +16,12 @@ class _MainShoppingPageState extends State<MainShoppingPage> {
         children: [
           Expanded(
             child: Container(
-                color: Colors.blue,
-                child: Image(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                      "https://cdn.pixabay.com/photo/2017/04/05/01/12/traveler-2203666_960_720.jpg"),
-                )),
+              color: Colors.blue,
+              child: Image.network(
+                img.bag8,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Expanded(
             child: Container(
