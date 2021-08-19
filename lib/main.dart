@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/ui/animation_page.dart';
-import 'package:my_flutter_app/ui/chess_page.dart';
-import 'package:my_flutter_app/ui/list_page.dart';
-import 'package:my_flutter_app/ui/profile_page.dart';
-
+import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,7 +11,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.green,
         accentColor: Colors.greenAccent
       ),
-      home: ListPage(),
+      home: MainShoppingPage(),
     );
   }
 }

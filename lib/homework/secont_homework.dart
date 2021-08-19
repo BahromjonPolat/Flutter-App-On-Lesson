@@ -30,6 +30,7 @@ class _SecondHomeworkState extends State<SecondHomework> {
 
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Container(
                     width: size.width * 0.6,
@@ -48,19 +49,19 @@ class _SecondHomeworkState extends State<SecondHomework> {
                   ),
 
                   Container(
-                    width: size.width * 0.6,
+                    width: size.width * 0.3,
                     height: size.height * 0.16,
                     color: Colors.redAccent,
                   ),
 
                   Container(
-                    width: size.width * 0.6,
+                    width: size.width * 0.3,
                     height: size.height * 0.16,
                     color: Colors.pinkAccent,
                   ),
 
                   Container(
-                    width: size.width * 0.6,
+                    width: size.width * 0.3,
                     height: size.height * 0.16,
                     color: Colors.yellow,
                   ),
