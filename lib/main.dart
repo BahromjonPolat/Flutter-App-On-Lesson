@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
+import 'package:my_flutter_app/lesson6/homework/home_page.dart';
+import 'package:my_flutter_app/lesson6/homework/product_info_page.dart';
+import 'package:my_flutter_app/lesson6/homework/product_list.dart';
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,9 +12,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.green,
-        accentColor: Colors.greenAccent
+        accentColor: Colors.greenAccent,
       ),
-      home: MainShoppingPage(),
+      home: ShopHomePage(),
     );
   }
 }

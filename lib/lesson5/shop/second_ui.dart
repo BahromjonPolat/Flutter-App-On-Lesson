@@ -152,9 +152,10 @@ class _SecondPageState extends State<SecondPage> {
       );
 
   Widget setCircleIcon(Icon icon, double size) => Container(
-      margin: EdgeInsets.only(right: 8.0),
-      child: Icon(
-        icon.icon,
-        size: size,
-      ));
+        margin: EdgeInsets.only(right: 8.0),
+        child: Icon(
+          icon.icon,
+          size: size,
+        ),
+      );
 }

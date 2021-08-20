@@ -8,3 +8,5 @@ String bag5 = "https://images.unsplash.com/photo-1572196223922-d8b7e0ab0b4d?ixid
 String bag6 = "https://images.unsplash.com/photo-1578237493287-8d4d2b03591a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fGJhZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
 String bag7 = "https://cdn.pixabay.com/photo/2016/11/29/09/41/bag-1868758_960_720.jpg";
 String bag8 = "https://images.unsplash.com/photo-1617179918913-f4e099813fb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80";
+
+
