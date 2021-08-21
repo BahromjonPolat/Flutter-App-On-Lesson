@@ -9,10 +9,8 @@ class RandomImagePage extends StatefulWidget {
 }
 
 class _RandomImagePageState extends State<RandomImagePage> {
-  String img1 = "https://source.unsplash.com/random/";
-  String img2 = "https://source.unsplash.com/random/1280x800";
-  String img3 = "https://source.unsplash.com/random/1080";
-  String img = " ";
+  String img = "https://source.unsplash.com/random/";
+  List<String> imageUrls = List.generate(100, (index) => "https://source.unsplash.com/random/$index");
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +38,8 @@ class _RandomImagePageState extends State<RandomImagePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                int random = Random().nextInt(100);
                 setState(() {
-                  if (img != img1) img = img1 + random.toString();
+                  img = imageUrls[Random().nextInt(100)];
                 });
               },
               child: Text(
