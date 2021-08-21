@@ -49,17 +49,15 @@ class _ShopHomePageState extends State<ShopHomePage> {
           Expanded(
             flex: 4,
             child: Container(
+              alignment: Alignment(0.0, 0.5),
               width: MediaQuery.of(context).size.width * 1.0,
-              color: Colors.green,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return ProductListPage();
-                  }));
-                },
-                child: Text(""),
+              child: Text(
+                "Hello",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-              foregroundDecoration: BoxDecoration(
+              decoration: BoxDecoration(
                   image: DecorationImage(
                 fit: BoxFit.cover,
                 image: NetworkImage(img.mainImg),
@@ -80,7 +78,7 @@ class _ShopHomePageState extends State<ShopHomePage> {
                     return ProductInfoPage();
                   }));
                 },
-                child: Text(""),
+                child: Text("Hello"),
               ),
               foregroundDecoration: BoxDecoration(
                   image: DecorationImage(

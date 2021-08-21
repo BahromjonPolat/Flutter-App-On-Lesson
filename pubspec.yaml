@@ -77,6 +77,10 @@ flutter:
     - family: poppins
       fonts:
         - asset: fonts/poppins.ttf
+
+    - family: lobster
+      fonts:
+        - asset: fonts/lobster-two-regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
