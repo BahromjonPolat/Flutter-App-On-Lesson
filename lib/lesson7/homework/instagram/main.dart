@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:my_flutter_app/json/user_list.dart';
 import 'package:my_flutter_app/lesson7/homework/instagram/data/post_list.dart';
 import 'package:my_flutter_app/lesson7/homework/instagram/data/user_list.dart';
 import 'package:my_flutter_app/lesson7/homework/instagram/model/instagram_post.dart';
@@ -100,7 +98,7 @@ class _InstagramMainPageState extends State<InstagramMainPage> {
         itemCount: posts.length,
         itemBuilder: (context, index) {
           Post post = posts[index];
-
+          print("Index: $index");
           return Column(
             children: [
               ListTile(

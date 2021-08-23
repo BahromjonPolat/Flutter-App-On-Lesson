@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'image_addresses.dart' as img;
 import 'package:my_flutter_app/lesson6/homework/product_info_page.dart';
-import 'package:my_flutter_app/lesson6/homework/product_list.dart';
 
 class ShopHomePage extends StatefulWidget {
   @override

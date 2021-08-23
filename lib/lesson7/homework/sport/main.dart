@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:my_flutter_app/lesson5/shop/image_url.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/model/sport.dart';
+import 'package:my_flutter_app/lesson7/homework/sport/statistics_page.dart';
+
 
 class SportMenPage extends StatefulWidget {
   @override
@@ -172,10 +174,17 @@ class _SportMenPageState extends State<SportMenPage> {
         _setIcon(CupertinoIcons.chart_bar, Colors.grey),
         _setIcon(CupertinoIcons.chat_bubble_text_fill, Colors.grey),
         _setIcon(CupertinoIcons.person_2, Colors.grey),
-        CircleAvatar(
-          backgroundColor: Colors.indigo,
-          backgroundImage: AssetImage("images/123.jpg"),
-        )
+        GestureDetector(
+          child: CircleAvatar(
+            backgroundColor: Colors.indigo,
+            backgroundImage: AssetImage("images/123.jpg"),
+          ),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_){
+              return StatisticsPage();
+            }));
+          },
+        ),
       ],
     );
   }
