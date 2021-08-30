@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/ui/ui_list/lesson_list.dart';
-import 'package:my_flutter_app/ui/ui_list/model/lesson.dart';
+import 'package:my_flutter_app/data/lesson_list.dart';
+import 'package:my_flutter_app/model/lesson.dart';
 
 class LessonListPage extends StatefulWidget {
   @override
@@ -23,9 +23,9 @@ class _LessonListPageState extends State<LessonListPage> {
 
   Widget getUIList() {
     return ListView.builder(
-        itemCount: getLessons().length,
+        itemCount: getLessons.length,
         itemBuilder: (context, index) {
-          Lesson lesson = getLessons()[index];
+          Lesson lesson = getLessons[index];
           return Card(
 
             child: ListTile(
@@ -39,7 +39,7 @@ class _LessonListPageState extends State<LessonListPage> {
                 lesson.title,
               ),
               subtitle: Text(
-                lesson.subTitle,
+                lesson.date,
               ),
               trailing: Icon(
                 CupertinoIcons.arrow_right_circle_fill,

@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter_app/lesson11/main.dart';
 import 'package:my_flutter_app/lesson13/details.dart';
 import 'package:my_flutter_app/lesson13/list_page.dart';
-import 'package:my_flutter_app/lesson6/homework/home_page.dart';
-import 'package:my_flutter_app/ui/ui_list/main.dart';
+import 'package:my_flutter_app/screens/screen_list.dart';
 
 import 'lesson10/main.dart';
 
