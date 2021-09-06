@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/lesson14/screens/car_list_page.dart';
+import 'package:my_flutter_app/lesson14/screens/super_mario.dart';
 
 // Mario Game
 
@@ -8,58 +10,29 @@ class LessonFourTeenMainPage extends StatefulWidget {
 }
 
 class _LessonFourTeenMainPageState extends State<LessonFourTeenMainPage> {
-  Size _size;
-  double _y = 0.0;
-  bool isToUp = true;
-  bool isJump = true;
 
   @override
   Widget build(BuildContext context) {
-    _size = MediaQuery.of(context).size;
     return Scaffold(
-      body: _getMarioPage(),
+      body: _getBody(),
     );
   }
 
-  _getMarioPage() => Column(
-        children: [
-          Expanded(
-              child: Container(
-            color: Colors.teal,
-            width: _size.width * 1.0,
-            alignment: Alignment(0.0, _y),
-            child: Container(
-              height: _size.width * 0.2,
-              width: _size.width * 0.2,
-              child: Image.asset("images/mario.png"),
-            ),
-          )),
-          _jump(),
-        ],
-      );
+  _getBody() => Column(
+    children: [
+      _goToPage(LessonFourTeenSuperMario(), title: "Super Mario"),
+      _goToPage(LessonFourTeenCarListPage(), title: "Rent Car"),
+    ],
+  );
 
-  _jump() => ElevatedButton(
-      onPressed: () async {
-        for (int i = 0; i < 100; i++) {
-          await Future.delayed(Duration(milliseconds: 10), () {
-            setState(() {
-              if (isToUp) {
-                _y -= 0.03;
-                if (_y <= -0.5) isToUp = false;
-              } else if (!isToUp) {
-                _y += 0.03;
-                if (_y >= 0.0) {
-                  isToUp = true;
-                  isJump = !isJump;
-                }
-              }
-            });
-          });
-          if (!isJump) {
-            isJump = !isJump;
-            break;
-          }
-        }
-      },
-      child: Text("JUMP"));
+  _goToPage(page, {String title}) => Expanded(child: GestureDetector(
+    child: Container(
+      alignment: Alignment.center,
+      child: Text(title),
+    ),
+    onTap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+    },
+  ));
+
 }
