@@ -4,7 +4,8 @@ import 'package:my_flutter_app/lesson14/screens/car_info_page.dart';
 
 class LessonFourTeenCarListPage extends StatefulWidget {
   @override
-  _LessonFourTeenCarListPageState createState() => _LessonFourTeenCarListPageState();
+  _LessonFourTeenCarListPageState createState() =>
+      _LessonFourTeenCarListPageState();
 }
 
 class _LessonFourTeenCarListPageState extends State<LessonFourTeenCarListPage> {
@@ -14,14 +15,26 @@ class _LessonFourTeenCarListPageState extends State<LessonFourTeenCarListPage> {
       appBar: AppBar(
         title: Text(CarInfo.app_name),
       ),
-      body: _getBody(),
+      body: _pullToRefresh(),
     );
   }
 
+  /// Sahifani yangilash uchun funlksiya.
+  _pullToRefresh() => RefreshIndicator(
+      color: Colors.green,
+      displacement: 15.0,
+      child: _getBody(),
+      onRefresh: () {
+        return Future.delayed(Duration(seconds: 3), () {});
+      });
+
+  /// Ilovaning tana qismi. U mashinalarning listini ko`rsatadi.
   _getBody() => ListView.builder(
+      physics: BouncingScrollPhysics(),
       itemCount: CarInfo.CAR_NAMES.length,
       itemBuilder: (context, index) => _setCarInfo(index));
 
+  ///
   Widget _setCarInfo(int index) => Card(
         child: ListTile(
           leading: CircleAvatar(
@@ -32,7 +45,10 @@ class _LessonFourTeenCarListPageState extends State<LessonFourTeenCarListPage> {
           subtitle: Text(CarInfo.CAR_YEARS[index]),
           trailing: Icon(Icons.arrow_forward_ios),
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> LessonFourTeenCarInfoPage(index)));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => LessonFourTeenCarInfoPage(index)));
           },
         ),
       );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/lesson14/data/car_info.dart';
+import 'package:palette_generator/palette_generator.dart';
 
 class LessonFourTeenCarInfoPage extends StatefulWidget {
   int currentIndex;
@@ -13,12 +14,24 @@ class LessonFourTeenCarInfoPage extends StatefulWidget {
 
 class _LessonFourTeenCarInfoPageState extends State<LessonFourTeenCarInfoPage> {
   Size _size;
+  PaletteGenerator _paletteGenerator;
+  
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _updatePaletteGenerator();
+    // _bgColor = _paletteGenerator.dominantColor.color;
+  }
 
   @override
   Widget build(BuildContext context) {
     _size = MediaQuery.of(context).size;
     return Scaffold(
-      body: _getBodyCustomScrollView(),
+      body: (_paletteGenerator != null)
+          ? _getBodyCustomScrollView()
+          : _getProgressIfColorNull(),
     );
   }
 
@@ -29,9 +42,15 @@ class _LessonFourTeenCarInfoPageState extends State<LessonFourTeenCarInfoPage> {
         ],
       );
 
+  _getProgressIfColorNull() => Center(
+        child: CircularProgressIndicator(),
+      );
+
   _getSliverAppBar() => SliverAppBar(
         floating: true,
         stretch: true,
+        pinned: true,
+        backgroundColor: _paletteGenerator.dominantColor.color,
         title: Text(CarInfo.CAR_NAMES[widget.currentIndex]),
         expandedHeight: 240,
         flexibleSpace: FlexibleSpaceBar(
@@ -77,8 +96,7 @@ class _LessonFourTeenCarInfoPageState extends State<LessonFourTeenCarInfoPage> {
             scrollDirection: Axis.horizontal,
             itemCount: CarInfo.CAR_NAMES.length,
             itemBuilder: (context, index) {
-              
-              if (index== widget.currentIndex) {
+              if (index == widget.currentIndex) {
                 return Container();
               }
               String carImage =
@@ -115,13 +133,20 @@ class _LessonFourTeenCarInfoPageState extends State<LessonFourTeenCarInfoPage> {
       );
 
   _showOtherCarsText() => Container(
-    padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
+        padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
         child: Text(
           "Other Cars",
-          style: TextStyle(color: Colors.black,
-          fontWeight: FontWeight.bold,
-            fontSize: 18.0
-          ),
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18.0),
         ),
       );
+
+  Future<void> _updatePaletteGenerator() async {
+    _paletteGenerator = await PaletteGenerator.fromImageProvider(
+      AssetImage(
+        "images/cars/${CarInfo.CAR_NAMES[widget.currentIndex].toLowerCase()}_katta${widget.currentIndex}.jpeg",
+      ),
+    );
+    setState(() {});
+  }
 }

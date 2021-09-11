@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/lesson10/flexible_space_bar.dart';
-import 'package:my_flutter_app/lesson10/main.dart';
 import 'package:my_flutter_app/lesson11/main.dart';
 import 'package:my_flutter_app/lesson12/main.dart';
 import 'package:my_flutter_app/lesson13/main.dart';
-import 'package:my_flutter_app/lesson14/screens/car_list_page.dart';
 import 'package:my_flutter_app/lesson14/main.dart';
+import 'package:my_flutter_app/lesson15/main.dart';
+import 'package:my_flutter_app/lesson18/form_fields.dart';
 import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
 import 'package:my_flutter_app/lesson6/homework/home_page.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/main.dart';
@@ -71,14 +71,20 @@ List<Lesson> getLessons = [
   ),
   new Lesson(
     "Lesson 14",
-    "",
+    "05-09-2021",
     Icon(Icons.sd_storage_outlined),
     LessonFourTeenMainPage(),
   ),
-  // new Lesson(
-  //   "Lesson 15",
-  //   "06-09-2021",
-  //   Icon(Icons.menu_book_sharp),
-  //   LessonFiveTeenMainPage(),
-  // ),
+  new Lesson(
+    "Lesson 15",
+    "06-09-2021",
+    Icon(Icons.menu_book_sharp),
+    LessonFiveTeenMainPage(),
+  ),
+  new Lesson(
+    "Lesson 18",
+    "10-09-2021",
+    Icon(Icons.login),
+    LessonEightTeenLoginFormPage(),
+  )
 ];
