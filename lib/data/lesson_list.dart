@@ -7,7 +7,9 @@ import 'package:my_flutter_app/lesson13/main.dart';
 import 'package:my_flutter_app/lesson14/main.dart';
 import 'package:my_flutter_app/lesson15/main.dart';
 import 'package:my_flutter_app/lesson18/form_fields.dart';
+import 'package:my_flutter_app/lesson19/homework.dart';
 import 'package:my_flutter_app/lesson19/main.dart';
+import 'package:my_flutter_app/lesson20/main.dart';
 import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
 import 'package:my_flutter_app/lesson6/homework/home_page.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/main.dart';
@@ -92,6 +94,13 @@ List<Lesson> getLessons = [
     "Lesson 19",
     "13-09-2021",
     Icon(Icons.add_circle_outline_rounded),
-    LessonNineTeenMainPage(),
+    LessonNineTeenHomeworkPage(),
+  ),
+
+  new Lesson(
+    "Lesson 20",
+    "14-09-2021",
+    Icon(Icons.play_lesson),
+    LessonTwentyMainPage(),
   ),
 ];
