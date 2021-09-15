@@ -15,19 +15,8 @@ class _LessonTwentyGamePageState extends State<LessonTwentyGamePage> {
   int _init;
   int _end;
 
-  List<bool> _isPressedList = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    true
-  ];
+  List<bool> _isPressedList =
+      List.generate(11, (index) => index == 11 ? true : false);
 
   @override
   Widget build(BuildContext context) {
@@ -61,12 +50,14 @@ class _LessonTwentyGamePageState extends State<LessonTwentyGamePage> {
       );
 
   ElevatedButton _getNumberButton(int number) {
+    int pressedNumber = number - 1;
     return ElevatedButton(
         style: _getButtonStyle(number),
-        onPressed: (_isPressedList[number - 1])
+        onPressed: (_isPressedList[pressedNumber])
             ? () {
                 if (number == 11) {
-                  for (int i = 0; i < 11; i++) _isPressedList[i] = !_isPressedList[i];
+                  for (int i = 0; i < 11; i++)
+                    _isPressedList[i] = !_isPressedList[i];
                   _init = DateTime.now().second;
                 } else {
                   if (_randomNumber == number) {
@@ -87,7 +78,8 @@ class _LessonTwentyGamePageState extends State<LessonTwentyGamePage> {
                   _end = DateTime.now().second;
                   _showDialog(false);
                 }
-                _isPressedList[number - 1] = false;
+                _isPressedList[pressedNumber] = false;
+
                 setState(() {});
               }
             : null,
