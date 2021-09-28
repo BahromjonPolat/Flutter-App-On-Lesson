@@ -19,6 +19,7 @@ import 'package:my_flutter_app/lesson6/homework/home_page.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/main.dart';
 import 'package:my_flutter_app/lesson8/main.dart';
 import 'package:my_flutter_app/lesson9/main.dart';
+import 'package:my_flutter_app/lessonThirty/main.dart';
 import 'package:my_flutter_app/model/lesson.dart';
 
 List<Lesson> getLessons = [
@@ -136,4 +137,10 @@ List<Lesson> getLessons = [
     Icon(Icons.add),
     LessonTwentyNineMainPage(),
   ),
+  new Lesson(
+    "Lesson 30",
+    "28-09-2021",
+    Icon(Icons.label),
+    LessonThirtyMainPage(),
+  )
 ];
