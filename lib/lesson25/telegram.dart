@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-mixin LessonTwentyFiveTelegramMain implements StatelessWidget {
+class LessonTwentyFiveTelegramMain extends StatelessWidget {
   GlobalKey<ScaffoldState> _keyScaffold = GlobalKey();
   Size _size;
 
   @override
   Widget build(BuildContext context) {
-    _size = MediaQuery
-        .of(context)
-        .size;
+    _size = MediaQuery.of(context).size;
     return Scaffold(
       key: _keyScaffold,
       appBar: _setAppBar(),
@@ -16,9 +14,7 @@ mixin LessonTwentyFiveTelegramMain implements StatelessWidget {
     );
   }
 
-
-  AppBar _setAppBar() =>
-      AppBar(
+  AppBar _setAppBar() => AppBar(
         backgroundColor: Colors.teal,
         title: Text("Plus Messenger"),
         actions: [
@@ -31,11 +27,9 @@ mixin LessonTwentyFiveTelegramMain implements StatelessWidget {
   IconButton _setIconButton(IconData icon) =>
       IconButton(onPressed: () {}, icon: Icon(icon));
 
-  Drawer _getDrawer() =>
-      Drawer(
+  Drawer _getDrawer() => Drawer(
         child: ListView(
           children: [
-
             /// Telegram Drawer user haqida ma'lumotni ko`rsatadigan tepa qismi
             _drawerHeader(),
 
@@ -60,8 +54,7 @@ mixin LessonTwentyFiveTelegramMain implements StatelessWidget {
 
   Divider _setDivider() => Divider();
 
-  UserAccountsDrawerHeader _drawerHeader() =>
-      UserAccountsDrawerHeader(
+  UserAccountsDrawerHeader _drawerHeader() => UserAccountsDrawerHeader(
         accountName: Text("Bahromjon"),
         accountEmail: Text("+998931881333"),
         currentAccountPicture: CircleAvatar(
@@ -79,8 +72,7 @@ mixin LessonTwentyFiveTelegramMain implements StatelessWidget {
         ],
       );
 
-  ListTile _setCategory(String title, IconData icon) =>
-      ListTile(
+  ListTile _setCategory(String title, IconData icon) => ListTile(
         leading: Icon(
           icon,
           color: Colors.teal,
