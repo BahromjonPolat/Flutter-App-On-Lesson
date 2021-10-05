@@ -40,6 +40,10 @@ dependencies:
   #UUID
   uuid: ^3.0.4
 
+  url_launcher: ^6.0.0
+
+  qr_code_scanner: ^0.5.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -56,8 +60,9 @@ flutter:
   uses-material-design: true
 
   assets:
-     - images/
-     - images/cars/
+    - data/
+    - images/
+    - images/cars/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

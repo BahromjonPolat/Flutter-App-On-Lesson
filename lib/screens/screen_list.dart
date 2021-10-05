@@ -26,7 +26,6 @@ class _LessonListPageState extends State<LessonListPage> {
         itemCount: getLessons.length,
         itemBuilder: (context, index) {
           Lesson lesson = getLessons[index];
-          print('_LessonListPageState.getUIList $index');
           return Card(
 
             child: ListTile(

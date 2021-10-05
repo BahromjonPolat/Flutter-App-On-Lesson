@@ -1,0 +1,46 @@
+[
+  {
+    "name": "John",
+    "username": "weak",
+    "birth_date": 1994,
+    "image_url": "https://source.unsplash.com/random/1",
+    "color": "0xFF323456",
+    "address": {
+      "country": "Uzbekistan",
+      "region": "Tashkent"
+    }
+  },
+  {
+    "name": "John",
+    "username": "weak",
+    "birth_date": 1994,
+    "image_url": "https://source.unsplash.com/random/2",
+    "color": "0xFF923456",
+    "address": {
+      "country": "Uzbekistan",
+      "region": "Andijan"
+    }
+  },
+  {
+    "name": "John",
+    "username": "weak",
+    "birth_date": 1994,
+    "image_url": "https://source.unsplash.com/random/3",
+    "color": "0xFF523456",
+    "address": {
+      "country": "Uzbekistan",
+      "region": "Bukhara"
+    }
+  },
+  {
+    "name": "John",
+    "username": "weak",
+    "birth_date": 1994,
+    "image_url": "https://source.unsplash.com/random/4",
+    "color": "0xFF823456",
+    "address": {
+      "country": "Uzbekistan",
+      "region": "Samarkand"
+    }
+  }
+]

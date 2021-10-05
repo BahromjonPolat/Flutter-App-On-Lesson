@@ -14,12 +14,15 @@ import 'package:my_flutter_app/lesson22/main.dart';
 import 'package:my_flutter_app/lesson23/quiz_app.dart';
 import 'package:my_flutter_app/lesson25/telegram.dart';
 import 'package:my_flutter_app/lesson29/main.dart';
+import 'package:my_flutter_app/lesson30/main.dart';
+import 'package:my_flutter_app/lesson31/main.dart';
+import 'package:my_flutter_app/lesson32/main.dart';
+import 'package:my_flutter_app/lesson33/main.dart';
 import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
 import 'package:my_flutter_app/lesson6/homework/home_page.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/main.dart';
 import 'package:my_flutter_app/lesson8/main.dart';
 import 'package:my_flutter_app/lesson9/main.dart';
-import 'package:my_flutter_app/lessonThirty/main.dart';
 import 'package:my_flutter_app/model/lesson.dart';
 
 List<Lesson> getLessons = [
@@ -142,5 +145,23 @@ List<Lesson> getLessons = [
     "28-09-2021",
     Icon(Icons.label),
     LessonThirtyMainPage(),
-  )
+  ),
+  new Lesson(
+    "Lesson 31",
+    "29-09-2021",
+    Icon(Icons.leak_add_sharp),
+    LessonThirtyOneMainPage(),
+  ),
+  new Lesson(
+    "Lesson 32",
+    "01-10-2021",
+    Icon(Icons.leak_add_sharp),
+    LessonThirtyTwoMainPage(),
+  ),
+  new Lesson(
+    "Lesson 33",
+    "05-10-2021",
+    Icon(Icons.add_circle_outline_rounded),
+    LessonThirtyThreeMainPage(),
+  ),
 ];
