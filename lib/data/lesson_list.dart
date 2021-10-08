@@ -18,6 +18,7 @@ import 'package:my_flutter_app/lesson30/main.dart';
 import 'package:my_flutter_app/lesson31/main.dart';
 import 'package:my_flutter_app/lesson32/main.dart';
 import 'package:my_flutter_app/lesson33/main.dart';
+import 'package:my_flutter_app/lesson34/main.dart';
 import 'package:my_flutter_app/lesson5/shop/main_ui.dart';
 import 'package:my_flutter_app/lesson6/homework/home_page.dart';
 import 'package:my_flutter_app/lesson7/homework/sport/main.dart';
@@ -163,5 +164,11 @@ List<Lesson> getLessons = [
     "05-10-2021",
     Icon(Icons.add_circle_outline_rounded),
     LessonThirtyThreeMainPage(),
+  ),
+  new Lesson(
+    "Lesson 34",
+    "06-10-2021",
+    Icon(Icons.add_circle_outline_rounded),
+    LessonThirtyFourMain(),
   ),
 ];
