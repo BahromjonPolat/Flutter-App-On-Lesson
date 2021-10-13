@@ -5,7 +5,7 @@ class Cat {
 
   String get description => _description;
 
-  String get imageUrl => _imageUrl;2
+  String get imageUrl => _imageUrl;
 
   int get statusCode => _statusCode;
 
